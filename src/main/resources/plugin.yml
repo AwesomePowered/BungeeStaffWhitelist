@@ -1,0 +1,5 @@
+name: StaffWhitelist
+version: ${project.version}
+author: LaxWasHere
+depends: [BungeeYAML]
+main: net.lazlecraft.staffwhitelist.StaffWhitelist

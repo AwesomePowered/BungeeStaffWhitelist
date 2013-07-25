@@ -1,0 +1,28 @@
+#  ____  _         __  ____        ___     _ _       _ _     _   
+# / ___|| |_ __ _ / _|/ _\ \      / | |__ (_| |_ ___| (_)___| |_ 
+# \___ \| __/ _` | |_| |_ \ \ /\ / /| '_ \| | __/ _ | | / __| __|
+#  ___) | || (_| |  _|  _| \ V  V / | | | | | ||  __| | \__ | |_ 
+# |____/ \__\__,_|_| |_|    \_/\_/  |_| |_|_|\__\___|_|_|___/\__|
+#                                                                
+#                           By: The Amazing LaxWasHere
+#
+CancelReason: '&4&lSorry but you are not &aawesome &4&lenough to use the default Host/IP'
+#Players that needs to login using their own Host/IP.
+Whitelist:
+- WhitelistedPeople
+- LaxWasHere
+- MisterStaff
+- MissStaffer
+- GodAlmighty
+#List of players and the host/ips they are allowed to login with.
+LaxWasHere:
+- staff.lazlecraft.net
+- play.yomama.xxx
+MisterStaff:
+- MisterStaff.LazleCraft.net
+MissStaffer:
+- sexyStaffer.lazlecraft.net
+GodAlmight:
+- Fear.yomama.xxx
+- I.love.yomama.xxx
+- The.TacosInitiative.org
