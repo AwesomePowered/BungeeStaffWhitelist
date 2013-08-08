@@ -7,6 +7,8 @@
 #                           By: The Amazing LaxWasHere
 #
 CancelReason: '&4&lSorry but you are not &aawesome &4&lenough to use the default Host/IP'
+#Should we block non whitelisted players from using the whitelisted ips?
+BlockOthers: false
 #Players that needs to login using their own Host/IP.
 Whitelist:
 - WhitelistedPeople
@@ -14,6 +16,17 @@ Whitelist:
 - MisterStaff
 - MissStaffer
 - GodAlmighty
+
+#Ips only staff can use.
+WhitelistedIPs:
+- staff.lazlecraft.net
+- play.yomama.xxx
+- MisterStaff.LazleCraft.net
+- sexyStaffer.lazlecraft.net
+- Fear.yomama.xxx
+- I.love.yomama.xxx
+- The.TacosInitiative.org
+
 #List of players and the host/ips they are allowed to login with.
 LaxWasHere:
 - staff.lazlecraft.net

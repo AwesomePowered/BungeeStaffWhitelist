@@ -12,6 +12,7 @@ import net.md_5.bungee.event.EventHandler;
 public class StaffWhitelist extends ConfigurablePlugin implements Listener {
 	
 	public String prefix = "[StaffWhitelist] ";
+	public boolean bP;
 	
 	public void onEnable() {
 		registerFeature();
@@ -23,6 +24,7 @@ public class StaffWhitelist extends ConfigurablePlugin implements Listener {
 			this.getProxy().getPluginManager().registerCommand(this, new swreload(this));
 			this.getConfig().options().copyDefaults(true);
 			this.saveConfig();
+			bP = this.getConfig().getBoolean("BlockOthers");
 		}
 		else {
 			System.out.println(ChatColor.GREEN + "A message from LaxWasHere");
@@ -31,6 +33,23 @@ public class StaffWhitelist extends ConfigurablePlugin implements Listener {
 		}
 	}
 	
+	//My brain hurts making this listener @_@
+	//Damn logic
+	@EventHandler
+	public void onLog(LoginEvent ev) {
+		String player = ev.getConnection().getName();
+		String host = ev.getConnection().getVirtualHost().getHostString();
+		String pIP = ev.getConnection().getAddress().getAddress().toString().trim();
+		if (bP) {
+			if (getConfig().getStringList("WhitelistedIPs").contains(host)) {
+				if (!getConfig().getStringList("whitelist").contains(player)) {
+					ev.setCancelled(true);
+					ev.setCancelReason(ChatColor.RED + "Only staff can use this IP.");
+					System.out.println(prefix + player + " (" + pIP + ") " + "tried to login using " + host + " and was kicked.");
+				}
+			}
+		}
+	}
 	
 	@EventHandler
 	public void onLogin(LoginEvent ev) {
